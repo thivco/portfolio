@@ -1,11 +1,19 @@
-<script lang="ts">
+<script>
 
-import MainPage from './components/MainPage.vue'
-
+import { defineComponent } from 'vue';
+import MainPage from './components/MainPage.vue';
+import Navbar from './components/Navbar.vue';
+export default defineComponent({
+  components: {
+    MainPage,
+    Navbar
+  }
+})
 </script>
 
 <template>
-  <MainPage />
+  <Navbar/>
+  <MainPage/>
 </template>
 
 <style>

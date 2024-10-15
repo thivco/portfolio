@@ -1,21 +1,21 @@
 <script lang="ts">
 export default {
   data() {
-    const pages = {
-      home: { title: 'Home', path: '/home' },
-      about: { title: 'About', path: '/about' },
-      projects: { title: 'Projects', path: '/projects' },
-    };
-  },
-  methods: {},
-  mounted() {
-  },
+    return {
+    }
+    },
+    methods: {},
+    mounted() {
+    },
 }
 
 </script>
 
 <template>
   <p>Hello there</p>
+  <p v-for="page in pages">
+    Here is your page : {{ page.title }}
+  </p>
 </template>
 
 <style>
