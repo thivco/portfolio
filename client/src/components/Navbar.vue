@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 export default {
   data() {
     return {
@@ -28,10 +28,11 @@ export default {
 <style>
 #navbar {
   /* padding: 1rem; */
+  margin:0 auto;
   list-style: none;
-  background: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 a {
