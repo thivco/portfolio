@@ -1,20 +1,19 @@
 <script lang="ts">
 export default {
+  components: {},
   data() {
     return {
     }
-    },
-    methods: {},
-    mounted() {
-    },
+  },
+  methods: {
+  },
+  mounted() {
+  },
 }
 
 </script>
 
 <template>
-  <p v-for="page in pages">
-    Here is your page : {{ page.title }}
-  </p>
 </template>
 
 <style>
