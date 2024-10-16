@@ -1,9 +1,5 @@
-<script>
-import Projects from './Projects.vue';
+<script lang="ts">
 export default {
-  components: {
-    Projects
-  },
   data() {
     return {
     }
@@ -16,7 +12,9 @@ export default {
 </script>
 
 <template>
-  <Projects/>
+  <p v-for="page in pages">
+    Here is your page : {{ page.title }}
+  </p>
 </template>
 
 <style>

@@ -1,9 +1,6 @@
-<script>
-import Projects from './Projects.vue';
+<script lang="ts">
 export default {
-  components: {
-    Projects
-  },
+  components: {},
   data() {
     return {
     }
@@ -16,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <Projects/>
+    <p>Hello projects</p>
 </template>
 
 <style>

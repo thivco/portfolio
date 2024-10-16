@@ -18,7 +18,6 @@ export default {
 </script>
 
 <template>
-  <p>Hello navbar</p>
   <div id="navbar">
     <div v-for="page in pages">
       <a v-bind:href="page.anchor">{{ page.title }}</a>
@@ -28,17 +27,25 @@ export default {
 
 <style>
 #navbar {
-  padding: 1rem;
+  /* padding: 1rem; */
   list-style: none;
   background: white;
-  color: black;
   display: flex;
   flex-direction: row;
-  gap: 2rem;
 }
 
-ul {
-  padding: 0;
+a {
+  color: rgb(255, 239, 196);
+  background: rgb(3, 6, 14);
+  padding: 1rem 1rem;
   margin: 0;
+  transition: 500ms;
+}
+
+a:hover {
+  background: rgb(255, 239, 196);
+  color: rgb(3, 6, 14);
+  transition: 500ms;
+
 }
 </style>
