@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <div v-for="project in projects">
+  <div id="projects" v-for="project in projects">
     <p>Project title : {{project.title}}</p>
     <a :href="project.github_link"> Check it out on github</a>
     <p>Stack used :</p>

@@ -14,6 +14,10 @@ export default {
 </script>
 
 <template>
+  <div id="about">
+    <p>Not much to say about me but</p>
+    <p>I need to add in more lines to test the CSS</p>
+  </div>
 </template>
 
 <style>

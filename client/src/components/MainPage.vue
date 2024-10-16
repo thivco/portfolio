@@ -1,8 +1,12 @@
 <script>
 import Projects from './Projects.vue';
+import Contact from './Contact.vue';
+import About from './About.vue';
 export default {
   components: {
-    Projects
+    Projects,
+    Contact,
+    About
   },
   data() {
     return {
@@ -17,6 +21,8 @@ export default {
 
 <template>
   <Projects/>
+  <About/>
+  <Contact/>
 </template>
 
 <style>

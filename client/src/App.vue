@@ -23,6 +23,11 @@ export default defineComponent({
   will-change: filter;
   transition: filter 300ms;
 }
+
+* {
+  scroll-behavior: smooth;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

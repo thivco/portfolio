@@ -28,7 +28,7 @@ export default {
 <style scoped>
 #navbar {
   /* padding: 1rem; */
-  margin:0 auto;
+  margin:0 auto 100rem auto;
   list-style: none;
   display: flex;
   flex-direction: row;
