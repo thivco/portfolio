@@ -25,7 +25,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 #navbar {
   /* padding: 1rem; */
   margin:0 auto;

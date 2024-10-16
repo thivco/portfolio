@@ -19,12 +19,10 @@ export default {
           github_link: "https://github.com/thivco/algo",
           stack: ["PHP", "Algorithms"]
         }
-
       }
     }
   },
   methods: {
-
   },
   mounted() {
   },
@@ -33,10 +31,9 @@ export default {
 </script>
 
 <template>
-  <p>Hello projects</p>
   <div v-for="project in projects">
     <p>Project title : {{project.title}}</p>
-    <p>Check it out on github: {{project.github_link}}</p>
+    <a :href="project.github_link"> Check it out on github</a>
     <p>Stack used :</p>
     <div v-for="entry in project.stack">
       <p>{{entry}}</p>
