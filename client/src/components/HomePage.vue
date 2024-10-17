@@ -7,7 +7,7 @@ export default {
         projects: { title: "Projects", anchor: "#projects" },
         about: { title: 'About', anchor: '#about' },
         contact: { title: 'Contact', anchor: '#contact' },
-        github: {title: "Github", anchor:"github.com/thivco"},
+        github: {title: "Github", anchor:"https://github.com/thivco"},
         project1: { title: "Project1", anchor: "#project1" },
         project2: { title: 'Project2', anchor: '#project2' },
         project3: { title: 'Project3', anchor: '#project3' },

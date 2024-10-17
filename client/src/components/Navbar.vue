@@ -7,7 +7,7 @@ export default {
         projects: { title: "Projects", anchor: "#projects" },
         about: { title: 'About', anchor: '#about' },
         contact: { title: 'Contact', anchor: '#contact' },
-        github: {title: "Github", anchor:"github.com/thivco"}
+        github: {title: "Github", anchor:"https://github.com/thivco"}
       }
     }
   },
@@ -29,6 +29,8 @@ export default {
 <style scoped>
 #navbar {
   /* padding: 1rem; */
+  top:85%;
+  position: sticky;
   list-style: none;
   display: flex;
   flex-direction: row;
