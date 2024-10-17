@@ -2,27 +2,30 @@
 import Projects from './Projects.vue';
 import Contact from './Contact.vue';
 import About from './About.vue';
+import HomePage from "./HomePage.vue"
 export default {
   components: {
     Projects,
     Contact,
-    About
+    About,
+    HomePage
   },
   data() {
     return {
     }
-    },
-    methods: {},
-    mounted() {
-    },
+  },
+  methods: {},
+  mounted() {
+  },
 }
 
 </script>
 
 <template>
-  <Projects/>
-  <About/>
-  <Contact/>
+  <HomePage />
+  <Projects />
+  <About />
+  <Contact />
 </template>
 
 <style>
