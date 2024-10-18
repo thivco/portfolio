@@ -1,9 +1,13 @@
-FROM node:latest
+FROM oven/bun:latest
 WORKDIR /tmp/portfolio/server
-COPY package.json package-lock.json ./
-run npm install --production --silent
-EXPOSE 5060
-RUN chown -R node /tmp/portfolio
-USER node
-RUN npm install
-CMD ["npm", "run", "dev"]
+COPY package.json ./
+COPY bun.lockb ./
+RUN bun install --production --silent
+EXPOSE 8585
+RUN adduser --disabled-password --gecos "" userbun
+RUN chown -R userbun /tmp/portfolio/server
+RUN ls -lAh
+RUN pwd
+USER userbun
+RUN bun install
+CMD ["bun", "run", "dev"]
