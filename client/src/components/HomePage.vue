@@ -33,12 +33,17 @@ export default {
 <style scoped>
   #homepage {
     font-size: 3rem;
-    width: 100%;
-    max-width: 1280px;
+    /* min-width: 100%; */
+    margin: 0 auto;
+    width: 75%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap:1rem;
+  }
+
+  #homepage > a {
+    color:black;
   }
 
   .homepage__link {
