@@ -2,7 +2,7 @@ services:
   mongodb:
     image: mongo:latest
     volumes:
-      - mongo-data:/tmp/portfolio/db
+      - mongo-data:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
@@ -17,9 +17,7 @@ services:
       - "8585:8585"
     networks:
       - app-network
-    volumes:
-      - db-data:/tmp/portfolio/db
-
+  
   client:
     build:
       dockerfile: Dockerfile
@@ -27,9 +25,7 @@ services:
     ports:
       - "9595:9595"
     networks:
-      - app-networ    
-    volumes:
-      - mongo-data:/tmp/portfolio/db
+      - app-network
 
 volumes:
   mongo-data:
