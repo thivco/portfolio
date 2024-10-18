@@ -10,4 +10,5 @@ RUN ls -lAh
 RUN pwd
 USER userbun
 RUN bun install
+COPY . .
 CMD ["bun", "run", "dev"]
