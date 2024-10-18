@@ -1,4 +1,5 @@
 <script lang="ts">
+import { FormData } from "../types/FormData"
 export default {
   components: {},
   data() {
@@ -6,7 +7,7 @@ export default {
       formData: {
         email: "",
         description: "",
-      }
+      } as FormData
     }
   },
   methods: {

@@ -5,31 +5,15 @@ import { cors } from "hono/cors"
 
 const app = new Hono()
 
-
-const client = new MongoClient('mongodb://' + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + '@localhost:27017');
-const db = client.db('Testing');
-const collection = db.collection('comments');
-
-
 app.use(
   cors({
     origin: 'http://localhost:9595'
   })
 );
 
-client.connect()
-  .then(() => {
-    console.log("Connection succes yes ?");
-
-  })
-
-
-collection.insertOne({ key: 'value' });
-
-const docs = collection.find().toArray();
-
-console.log(docs);
-
+const client = new MongoClient('mongodb://' + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + '@localhost:27017');
+const db = client.db('Testing');
+const collection = db.collection('comments');
 
 app.post("/api/submit", async (c) => {
   console.log("CORS activated");
@@ -46,7 +30,6 @@ app.post("/api/submit", async (c) => {
     console.error('HONO ! Error :', error);
     return c.json({ error: 'Failed to process data' }, 500);
   }
- 
 }
 )
 
