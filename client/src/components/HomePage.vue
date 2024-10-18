@@ -23,6 +23,8 @@ export default {
 </script>
 
 <template>
+  <h1 id="homepage__logo">Thibault</h1>
+  <p id="homepage__subtitle">Fullstack developer, configuration</p>
   <div id="homepage">
     <!-- <div v-for="page in pages"> -->
       <a class="homepage__link" v-for="page in pages" v-bind:href="page.anchor" :id="'homepage__'+page.title.toLowerCase()">{{ page.title }}</a>
@@ -48,7 +50,10 @@ export default {
 
   .homepage__link {
     background: red;
+    display: inline;
+    vertical-align:middle;
   }
+
 
   #homepage__projects{
     grid-row: 1/3;
@@ -84,4 +89,5 @@ export default {
     grid-row: 3/5;
     grid-column: 3;
   }
+
 </style>
