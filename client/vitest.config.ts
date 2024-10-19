@@ -21,7 +21,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-    include: ['**/*.test.js', '**/*.spec.js']
+    include: ['**/*.test.ts', '**/*.spec.ts']
   },
   plugins:[vue()]
 });

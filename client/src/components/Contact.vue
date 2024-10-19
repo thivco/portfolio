@@ -24,6 +24,7 @@ export default {
         })
         const DATA = await RESPONSE.json()
         console.log("Here is the data", DATA);
+        // Calling fetchComments to update the comments on submit
         this.fetchComments()
       } catch (error) {
         console.error("Something wrong happened :", error);
