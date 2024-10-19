@@ -1,8 +1,8 @@
 <script>
-import Projects from './Projects.vue';
-import Contact from './Contact.vue';
-import About from './About.vue';
-import HomePage from "./HomePage.vue"
+import Projects from '@/components/Projects.vue';
+import Contact from '@/components/Contact.vue';
+import About from '@/components/About.vue';
+import HomePage from '@/components/HomePage.vue';
 export default {
   components: {
     Projects,

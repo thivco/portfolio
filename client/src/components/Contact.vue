@@ -1,5 +1,6 @@
 <script lang="ts">
 import { FormData } from "../types/FormData"
+
 export default {
   components: {},
   data() {
@@ -35,6 +36,7 @@ export default {
           console.log("Seems to be the promise in the front", RESPONSE)
           this.commentsData = await RESPONSE.json()
           console.log("Fetched comments data:", this.commentsData);
+          return this.commentsData
         }
       } catch (error) {
         console.error("Error in the front when fetching comment", error);

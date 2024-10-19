@@ -12,8 +12,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <Navbar/>
   <MainPage/>
+  <Navbar/>
 </template>
 
 <style>
