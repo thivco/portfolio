@@ -7,9 +7,6 @@ const __dirname = path.dirname(__filename);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  test: {
-    include:["**/tests/**.test.ts"],
-  },
   server: {
     host: "0.0.0.0",
     port: 9595
