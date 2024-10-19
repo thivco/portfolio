@@ -23,7 +23,7 @@ export default {
         })
         const DATA = await RESPONSE.json()
         console.log("Here is the data", DATA);
-
+        this.fetchComments()
       } catch (error) {
         console.error("Something wrong happened :", error);
       }
