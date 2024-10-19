@@ -13,28 +13,42 @@ app.use(
   })
 );
 
-// const client = new MongoClient('mongodb://' + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + '@localhost:27017');-
 const URI = "mongodb://" + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + "@mongodb:27017/Testing"
 // Here using mongodb instead of localhost as its a container
 const client = new MongoClient(URI);
 const db = client.db('Testing');
 const collection = db.collection('comments');
 
-app.post("/api/submit", async (c, next) => {
-  console.log("CORS activated");
-  console.log(URI, "URI");
+// app.use("/api/comments", async (c, next) => {
+//   console.log("Hi !");
+//   await next()
+// })
 
+app.get("/api/comments", async (c) => {
+  try {
+    await client.connect();
+    const COMMENTS = await collection.find().limit(50).toArray();
+    console.log(COMMENTS, "The comments");
+    return c.json(COMMENTS)
+    
+  } catch (error) {
+    console.error("Error when fetching the comments in the back :", error);  
+    return c.json({ error: 'Error fetching comments' }, 500);
+  }
+
+})
+
+app.post("/api/submit", async (c) => {
   try {
     const formData = await c.req.json();
     const { email, description } = formData;
     console.log('Received data:', formData);
     try {
-     await client.connect();
-     await collection.insertOne(formData)
-     c.status(200)
+      await client.connect();
+      await collection.insertOne(formData)
+      c.status(200)
     } catch (error) {
       console.error("Data received, but couldn't send it to the database:", error);
-
     }
     return c.json({
       message: 'Data received successfully',
