@@ -18,6 +18,7 @@ const URI = "mongodb://" + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + proces
 const client = new MongoClient(URI);
 const db = client.db('Testing');
 const collection = db.collection('comments');
+console.log("The URI", URI)
 
 // app.use("/api/comments", async (c, next) => {
 //   console.log("Hi !");

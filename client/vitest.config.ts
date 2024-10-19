@@ -13,13 +13,15 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
+import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   test: {
+    environment:"happy-dom",
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
     include: ['**/*.test.js', '**/*.spec.js']
   },
+  plugins:[vue()]
 });
