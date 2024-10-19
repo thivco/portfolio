@@ -8,7 +8,7 @@ export default {
       formData: {
         email: "",
         description: "",
-      }
+      } as FormData
     }
   },
   methods: {
