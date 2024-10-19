@@ -32,7 +32,7 @@ export default {
     async fetchComments() {
       try {
         const RESPONSE = await fetch("http://localhost:8585/api/comments")
-        if(RESPONSE.ok){
+        if (RESPONSE.ok) {
           console.log("Seems to be the promise in the front", RESPONSE)
           this.commentsData = await RESPONSE.json()
           console.log("Fetched comments data:", this.commentsData);
@@ -60,7 +60,7 @@ export default {
       <textarea v-model="formData.description" id="contactform__description">And here</textarea>
       <button type="submit">Submit</button>
       <ul v-if="commentsData" v-for="comment in commentsData">
-        <li>{{comment.email}} posted : <br> {{ comment.description }}</li>
+        <li>{{ comment.email }} posted : <br> {{ comment.description }}</li>
       </ul>
     </form>
   </div>

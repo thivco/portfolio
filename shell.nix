@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 pkgs.mkShell {
   # nativeBuildInputs is usually what you want -- tools you need to run
-  nativeBuildInputs = with pkgs.buildPackages; [ docker docker-compose ];
+  nativeBuildInputs = with pkgs.buildPackages; [ docker docker-compose nodejs ];
 
   shellHook = ''
       if ! pgrep dockerd >/dev/null; then

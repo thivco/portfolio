@@ -1,4 +1,4 @@
-// helpers.spec.js
+// contact.test.js
 import {submitHandler} from '@/components/Contact.vue'
 import {describe, it, expect, test} from 'vitest';
 
