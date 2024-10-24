@@ -32,7 +32,9 @@ export default {
     },
     async fetchComments() {
       try {
+        console.log( await fetch("http://localhost:8585/api/comments"))
         const RESPONSE = await fetch("http://localhost:8585/api/comments")
+        
         if (RESPONSE.ok) {
           console.log("Seems to be the promise in the front", RESPONSE)
           this.commentsData = await RESPONSE.json()
