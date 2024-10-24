@@ -23,7 +23,6 @@ export default {
           body: JSON.stringify(this.formData)
         })
         const DATA = await RESPONSE.json()
-        console.log("Here is the data", DATA);
         // Calling fetchComments to update the comments on submit
         this.fetchComments()
       } catch (error) {
@@ -36,9 +35,8 @@ export default {
         const RESPONSE = await fetch("http://localhost:8585/api/comments")
         
         if (RESPONSE.ok) {
-          console.log("Seems to be the promise in the front", RESPONSE)
           this.commentsData = await RESPONSE.json()
-          console.log("Fetched comments data:", this.commentsData);
+          // console.log("Fetched comments data:", this.commentsData);
           return this.commentsData
         }
       } catch (error) {
