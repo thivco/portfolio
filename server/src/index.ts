@@ -13,10 +13,11 @@ app.use(
   })
 );
 
-const URI = "mongodb://" + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + "@mongodb:27017/Testing"
+const URI = "mongodb+srv://" + process.env.MONGO_ATLAS_USERNAME + ":" + process.env.MONGO_ATLAS_PASSWORD + "@folio.xlydv.mongodb.net/?retryWrites=true&w=majority&appName=Folio"
+// const URI = "mongodb://" + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + "@mongodb:27017/Testing"
 // Here using mongodb instead of localhost as its a container
 const client = new MongoClient(URI);
-const db = client.db('Testing');
+const db = client.db('Portfolio');
 const collection = db.collection('comments');
 console.log("The URI", URI)
 
@@ -28,6 +29,9 @@ console.log("The URI", URI)
 app.get("/api/comments", async (c) => {
   try {
     await client.connect();
+    const databasesList = await client.db().admin().listDatabases();
+    
+    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
     const COMMENTS = await collection.find().limit(50).toArray();
     console.log(COMMENTS, "The comments");
     return c.json(COMMENTS)
