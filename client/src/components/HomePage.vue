@@ -23,12 +23,15 @@ export default {
 </script>
 
 <template>
-  <h1 id="homepage__logo">Thibault QUI THIB</h1>
-  <p id="homepage__subtitle">Fullstack developer, configuration</p>
-  <div id="homepage">
-    <!-- <div v-for="page in pages"> -->
-      <a class="homepage__link" v-for="page in pages" v-bind:href="page.anchor" :id="'homepage__'+page.title.toLowerCase()">{{ page.title }}</a>
-    <!-- </div> -->
+  <div class="main_section">
+
+    <h1 id="homepage__logo">Thibault QUI THIB</h1>
+    <p id="homepage__subtitle">Fullstack developer, configuration</p>
+    <div id="homepage">
+      <!-- <div v-for="page in pages"> -->
+        <a class="homepage__link" v-for="page in pages" v-bind:href="page.anchor" :id="'homepage__'+page.title.toLowerCase()">{{ page.title }}</a>
+      <!-- </div> -->
+    </div>
   </div>
 </template>
 

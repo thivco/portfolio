@@ -1,14 +1,9 @@
 <script lang="ts">
-import { DefineProps } from 'vue';
-
-const props = defineProps<{
-    comment: Comment;
-}>()
 
 export default {
-// props:{
-//     comment:{},
-// },
+props:{
+    comment:{},
+},
   data() {
     return {
     }

@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div id="about">
+  <div id="about"  class="main_section"  >
     <div id="about__description">
 
       <p>Not much to say about me but</p>

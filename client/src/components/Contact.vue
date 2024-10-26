@@ -52,7 +52,7 @@ export default {
 </script>
 
 <template>
-  <div id="contact">
+  <div id="contact" class="main_section">
     <p>Here is the contact form, feel free to contact me to give me ideas !</p>
     <p>Please</p>
     <form @submit.prevent="submitHandler">
