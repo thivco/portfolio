@@ -61,7 +61,6 @@ export default {
       <textarea v-model="formData.description" id="contactform__description">And here</textarea>
       <button type="submit">Submit</button>
       <ul v-if="commentsData" v-for="comment in commentsData">
-        <li>{{ comment.email }} posted : <br> {{ comment.description }}</li>
          <CommentCard :comment="comment" />
       </ul>
     </form>

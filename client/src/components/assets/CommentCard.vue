@@ -3,7 +3,7 @@
 export default {
 props:{
     comment: {
-      type: Object as () => { email: string; description: string },
+      type: Object,
       required: true,
     },
   }, 
@@ -21,7 +21,8 @@ props:{
 
 <template>
   <div id="comment_card">
-    <p>{{ comment.email }}</p>
+    <p>{{ comment.email }} said:</p>
+    <p>{{ comment.description }}</p>
   </div>
 </template>
 

@@ -9,8 +9,10 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [vue()],
   server: {
+    watch:{usePolling:true},
     host: "0.0.0.0",
-    port: 9595
+    port: 9595,
+    strictPort:true
   },
   resolve: {
     alias: {
