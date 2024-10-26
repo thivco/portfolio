@@ -2,7 +2,7 @@
 import { FormData } from "../types/FormData"
 import CommentCard from "./assets/CommentCard.vue";
 export default {
-  components: {},
+  components: {CommentCard},
   data() {
     return {
       commentsData: {},
@@ -62,9 +62,7 @@ export default {
       <button type="submit">Submit</button>
       <ul v-if="commentsData" v-for="comment in commentsData">
         <li>{{ comment.email }} posted : <br> {{ comment.description }}</li>
-         <CommentCard :comment="{email:comment.email,
-          description:comment.description
-         }" />
+         <CommentCard :comment="comment" />
       </ul>
     </form>
   </div>

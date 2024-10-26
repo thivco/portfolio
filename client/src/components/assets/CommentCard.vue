@@ -2,15 +2,18 @@
 
 export default {
 props:{
-    comment:{},
-},
+    comment: {
+      type: Object as () => { email: string; description: string },
+      required: true,
+    },
+  }, 
   data() {
     return {
     }
   },
   methods: {},
   mounted() {
-    console.log(comment)
+    console.log(this.comment)
 },
 }
 
