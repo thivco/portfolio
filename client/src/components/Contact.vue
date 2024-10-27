@@ -60,8 +60,8 @@ export default {
       <input type="email" v-model="formData.email" placeholder="Your mail adress" id="contactform__mail">
       <textarea v-model="formData.description" id="contactform__description">And here</textarea>
       <button type="submit">Submit</button>
-      <ul v-if="commentsData" class="comment_cards" v-for="comment in commentsData">
-         <CommentCard :comment="comment" />
+      <ul v-if="commentsData" class="comment_cards"> 
+         <CommentCard :comment="comment" v-for="comment in commentsData"/>
       </ul>
     </form>
   </div>
@@ -72,6 +72,8 @@ export default {
 .comment_cards{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap:1rem;
+  /* width: 100%; */
 }
 
 #contactform__submit {

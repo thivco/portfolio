@@ -29,5 +29,6 @@ props:{
 .comment_card{
   background-color: aliceblue;
   color:rgb(26, 26, 26);
+  text-align: left;
 }
 </style>
