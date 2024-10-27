@@ -1,3 +1,4 @@
+@use "./_variables.scss" as vars;
 
 .comment_cards{
   display: grid;
@@ -22,7 +23,7 @@
   border:none;
   outline: none;
   border-radius: 0%;
-  background: rgb(176, 176, 197);
+  background:vars.$primary-blue;
   margin: 0;
   padding: 0;
   color:black;

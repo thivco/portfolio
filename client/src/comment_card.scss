@@ -1,0 +1,7 @@
+@use "./variables" as vars;
+
+.comment_card{
+  background-color: vars.$primary-blue;
+  color:vars.$primary-white;
+  text-align: left;
+}
