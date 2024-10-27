@@ -4,21 +4,26 @@ export default {
   data() {
     return {
       projects: {
+        "just_dance": {
+          title:"Just Dance 2025, Release and Build Assistant",
+          project_link: "https://www.ubisoft.com/fr-fr/game/just-dance/2025",
+          stack:["Ansible", "Powershell", "Gitlab CI", "VueJS", "Docker"]
+        },
         "ratp_app": {
           title: "Companion mobile RATP",
-          github_link: "https://github.com/thivco/mercimetro",
+          project_link: "https://github.com/thivco/mercimetro",
           stack: ["React Native", "Expo", "TSX"]
         },
         "websocket_go": {
           title: "Pictionnary en ligne, Websocket & Go",
-          github_link: "https://github.com/thivco/go_go_go",
+          project_link: "https://github.com/thivco/go_go_go",
           stack: ["Websocket", "Go", "Javascript"]
         },
         "algorithms": {
           title: "Sorting algorithm, plus grand carre et calculatrice",
-          github_link: "https://github.com/thivco/algo",
+          project_link: "https://github.com/thivco/algo",
           stack: ["PHP", "Algorithms"]
-        }
+        },
       }
     }
   },
@@ -33,10 +38,10 @@ export default {
 <template>
   <div id="projects" class="main_section" v-for="project in projects">
     <p>Project title : {{project.title}}</p>
-    <a :href="project.github_link"> Check it out on github</a>
+    <a :href="project.project_link"> Check it out on github</a>
     <p>Stack used :</p>
-    <div v-for="entry in project.stack">
-      <p>{{entry}}</p>
+    <div>
+      <p v-for="entry in project.stack">{{entry}}</p>
     </div>
   </div>
 </template>

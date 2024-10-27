@@ -55,15 +55,15 @@ export default {
   <div id="contact" class="main_section">
     <p>Here is the contact form, feel free to contact me to give me ideas !</p>
     <p>Please</p>
-    <form @submit.prevent="submitHandler">
+    <form id="contact_form" @submit.prevent="submitHandler">
       <!-- <form id="contactform" action="localhost:8585/api/post_comment" method="post"> -->
       <input type="email" v-model="formData.email" placeholder="Your mail adress" id="contactform__mail">
       <textarea v-model="formData.description" id="contactform__description">And here</textarea>
       <button type="submit">Submit</button>
-      <ul v-if="commentsData" class="comment_cards"> 
-         <CommentCard :comment="comment" v-for="comment in commentsData"/>
-      </ul>
     </form>
+    <ul v-if="commentsData" class="comment_cards"> 
+       <CommentCard :comment="comment" v-for="comment in commentsData"/>
+    </ul>
   </div>
 </template>
 
@@ -81,11 +81,25 @@ export default {
   margin: 0 auto;
 }
 
-#contactform {
-  width: 70%;
+#contact_form {
+  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+#contact_form > * , #contact_form > *:focus{
+  border:none;
+  outline: none;
+  border-radius: 0%;
+  background: rgb(197, 189, 176);
+  margin: 0;
+  padding: 0;
+  color:black;
+}
+
+#contact_form > textarea {
+  height: 5vh;
 }
 
 </style>
