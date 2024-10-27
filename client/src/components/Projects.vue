@@ -51,7 +51,8 @@ export default {
         <p v-for="entry in project.stack">{{entry}}</p>
       </div>
       <div class="project_section__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit minima non culpa facilis velit saepe blanditiis, incidunt debitis ratione consectetur aperiam laudantium nemo similique molestias quae sint voluptatum, maiores ut?</div>
-      <img :src="project.image_link" alt="">
+      <!-- <p>prout</p> -->
+      <!-- <img :src="project.image_link" alt=""> -->
     </div>
   </div>
 </template>
