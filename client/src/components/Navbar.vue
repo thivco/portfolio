@@ -30,7 +30,12 @@ export default {
 #navbar {
   /* padding: 1rem; */
   top:85%;
-  position: sticky;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  position:fixed;
+  /* margin: 0 auto; */
   list-style: none;
   display: flex;
   flex-direction: row;

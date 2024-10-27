@@ -36,12 +36,15 @@ export default {
 </script>
 
 <template>
-  <div id="projects" class="main_section" v-for="project in projects">
-    <p>Project title : {{project.title}}</p>
-    <a :href="project.project_link"> Check it out on github</a>
-    <p>Stack used :</p>
-    <div>
-      <p v-for="entry in project.stack">{{entry}}</p>
+  <div class="main_section">
+
+    <div id="projects" class="project_section" v-for="project in projects">
+      <p>Project title : {{project.title}}</p>
+      <a :href="project.project_link"> Check it out on github</a>
+      <p>Stack used :</p>
+      <div>
+        <p v-for="entry in project.stack">{{entry}}</p>
+      </div>
     </div>
   </div>
 </template>
