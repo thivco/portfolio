@@ -12,8 +12,10 @@ services:
     build:
       dockerfile: Dockerfile
       context: ./server
-    # volumes:
-    #   - ./server:/server
+    volumes:
+      - ./server:/app/server
+      - ./server/package.json:/app/server/package.json
+      - ./server/bun.lockb:/app/server/bun.lockb
     ports:
       - "8585:8585"
     networks:
@@ -29,7 +31,8 @@ services:
       dockerfile: Dockerfile
       context: ./client
     volumes:
-      - ./client:/app
+      - ./client:/app/client
+      - ./client/package.json:/app/client/package.json
     ports:
       - "9595:9595"
     networks:

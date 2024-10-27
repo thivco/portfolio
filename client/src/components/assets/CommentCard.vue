@@ -13,19 +13,21 @@ props:{
   },
   methods: {},
   mounted() {
-    console.log(this.comment)
 },
 }
 
 </script>
 
 <template>
-  <div id="comment_card">
+  <div class="comment_card">
     <p>{{ comment.email }} said:</p>
     <p>{{ comment.description }}</p>
   </div>
 </template>
 
 <style>
-
+.comment_card{
+  background-color: aliceblue;
+  color:rgb(26, 26, 26);
+}
 </style>

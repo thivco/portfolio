@@ -1,10 +1,7 @@
 FROM node:latest
-WORKDIR /tmp/portfolio/client
-COPY package.json ./
-RUN npm install --production --silent
+WORKDIR /app/client
+#COPY package.json ./
 EXPOSE 9595
-RUN npm install
-COPY . .
-RUN chown -R node /tmp/portfolio/client
+#COPY . .
 USER node
-CMD ["npm", "run", "dev"]
+CMD ["sh", "-c", "npm install && npm run dev"]

@@ -60,7 +60,7 @@ export default {
       <input type="email" v-model="formData.email" placeholder="Your mail adress" id="contactform__mail">
       <textarea v-model="formData.description" id="contactform__description">And here</textarea>
       <button type="submit">Submit</button>
-      <ul v-if="commentsData" v-for="comment in commentsData">
+      <ul v-if="commentsData" class="comment_cards" v-for="comment in commentsData">
          <CommentCard :comment="comment" />
       </ul>
     </form>
@@ -68,6 +68,12 @@ export default {
 </template>
 
 <style>
+
+.comment_cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 #contactform__submit {
   width: 10rem;
   margin: 0 auto;
@@ -80,7 +86,4 @@ export default {
   flex-direction: column;
 }
 
-#contact {
-  margin-bottom: 100rem;
-}
 </style>

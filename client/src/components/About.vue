@@ -35,6 +35,7 @@ export default {
       </div>
       <div id="about__pictures">
         <p>Ici des images hihi</p>
+        <p>Dolor sit amet</p>
       </div>
   </div>
 </template>
