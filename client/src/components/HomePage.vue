@@ -24,7 +24,7 @@ export default {
 
 <template>
   <div id="home" class="main_section">
-    <h1 id="homepage__logo">Thibault QUI THIB</h1>
+    <h1 id="homepage__logo">Thibault</h1>
     <p id="homepage__subtitle">Fullstack developer, configuration</p>
     <div id="homepage">
       <!-- <div v-for="page in pages"> -->

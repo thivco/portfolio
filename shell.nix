@@ -11,5 +11,6 @@ pkgs.mkShell {
       else
         echo "Docker daemon already running."
       fi
+      docker compose down && docker compose up -d --build
   '';
 }
