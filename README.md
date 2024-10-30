@@ -11,3 +11,9 @@ thingz2do
 - [ ] make tools uniform : use bun instead of npm for the client ?
 
 - [ ] unit tests, coverage
+
+- [ ] small icons appear when hovering, animated
+
+- [ ] button that scrolls back up
+
+- [ ] responsive
