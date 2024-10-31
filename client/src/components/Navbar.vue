@@ -27,33 +27,4 @@ export default {
 </template>
 
 <style scoped>
-#navbar {
-  /* padding: 1rem; */
-  top:85%;
-  left: 0;
-  right: 0;
-  margin-inline: auto;
-  width: fit-content;
-  position:fixed;
-  /* margin: 0 auto; */
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-a {
-  color: rgb(255, 239, 196);
-  background: rgb(3, 6, 14);
-  padding: 1rem 1rem;
-  margin: 0;
-  transition: 500ms;
-}
-
-a:hover {
-  background: rgb(255, 239, 196);
-  color: rgb(3, 6, 14);
-  transition: 500ms;
-
-}
 </style>

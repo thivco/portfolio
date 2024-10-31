@@ -3,6 +3,7 @@
 @use "./comment_card.scss";
 @use "./project.scss";
 @use "./homepage.scss";
+@use "./navbar.scss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,7 +30,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  background: vars.$primary-white;
+  background: vars.$background-white;
   min-width: 320px;
   min-height: 100vh;
   color: vars.$primary-blue;

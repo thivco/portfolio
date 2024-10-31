@@ -33,7 +33,7 @@
 
 .comment_card {
   background-color: #03041D;
-  color: #F9F7EF;
+  color: #dad3b7;
   text-align: left;
 }
 
@@ -41,7 +41,7 @@
   height: 25vh;
   margin: 1rem 0;
   display: grid;
-  color: #F9F7EF;
+  color: #dad3b7;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(4, 1fr);
   background: #03041D;
@@ -95,8 +95,8 @@
   font-size: 3rem;
   /* min-width: 100%; */
   margin: 0 auto;
-  min-width: min(80vw, 1280px);
-  height: 50vh;
+  width: min(80vw, 1280px);
+  height: min(45vh, 720px);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -105,22 +105,32 @@
 
 #homepage > a {
   padding: 2rem;
+  transition: 0.3s ease-in-out;
+}
+
+#homepage span {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  transition: 0.3s ease-in-out;
 }
 
 .homepage__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #03041D;
-  color: #F9F7EF;
+  color: #dad3b7;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bolder;
-  transition: justify-content 1s ease-in-out;
 }
 
-.homepage__link:hover {
-  justify-content: left;
+#homepage a:hover span {
+  color: #03041D;
+  transform: translateX(-50%);
+}
+
+#homepage a:hover {
+  background: #dad3b7;
+  transition: 0.3s ease-in-out;
 }
 
 #homepage__logo {
@@ -160,6 +170,35 @@
 #homepage__project3 {
   grid-row: 3/5;
   grid-column: 3;
+}
+
+#navbar {
+  /* padding: 1rem; */
+  top: 85%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+  position: fixed;
+  /* margin: 0 auto; */
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navbar a {
+  color: #dad3b7;
+  background: #03041D;
+  padding: 1rem 1rem;
+  margin: 0;
+  transition: 500ms;
+}
+
+#navbar a:hover {
+  background: rgb(255, 239, 196);
+  color: rgb(3, 6, 14);
+  transition: 500ms;
 }
 
 :root {

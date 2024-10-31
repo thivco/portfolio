@@ -28,7 +28,7 @@ export default {
     <p id="homepage__subtitle">Fullstack developer, configuration</p>
     <div id="homepage">
       <!-- <div v-for="page in pages"> -->
-        <a class="homepage__link" v-for="page in pages" v-bind:href="page.anchor" :id="'homepage__'+page.title.toLowerCase()">{{ page.title }}</a>
+        <a class="homepage__link" v-for="page in pages" v-bind:href="page.anchor" :id="'homepage__'+page.title.toLowerCase()"><span>{{ page.title }}</span></a>
       <!-- </div> -->
     </div>
   </div>
