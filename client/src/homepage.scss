@@ -2,93 +2,93 @@
 
 
 #homepage {
-    font-size: 3rem;
-    /* min-width: 100%; */
-    margin: 0 auto;
-    width: min(80vw, 1280px);
-    height: min(45vh, 720px);
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap:1rem;
-  }
+  font-size: 3rem;
+  /* min-width: 100%; */
+  margin: 0 auto;
+  width: min(80vw, 1280px);
+  height: min(45vh, 720px);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
 
-  #homepage > a {
-    padding: 2rem;
-    // background: vars.$primary-blue;
-    transition: 0.3s ease-in-out;
-  }
+#homepage>a {
+  padding: 2rem;
+  // background: vars.$primary-blue;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+#homepage span {
+  transition: 0.3s ease-in-out;
+}
+
+.homepage__link {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background: vars.$primary-blue;
+  color: vars.$primary-white;
+  text-transform: uppercase;
+  // This is annoying as it greatly reduces the size of the tiles
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+//besoin evenement quand hover a sur span hacking
+#homepage a:hover span {
+  // what the fuck?
+  color: vars.$primary-blue;
+  // justify-content: left;
+}
+
+#homepage a:hover {
+  background: vars.$primary-white;
+  transition: 0.3s ease-in-out;
+}
+
+#homepage__logo {
+  font-size: 5rem;
+
   
-  #homepage  span {
-    
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    transition: 0.3s ease-in-out;
-  }
+}
 
-  .homepage__link {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    background: vars.$primary-blue;
-    color:vars.$primary-white;
-    text-transform: uppercase;
-    // This is annoying as it greatly reduces the size of the tiles
-    font-size: 2rem;
-    font-weight: bolder;
+#homepage__projects {
+  grid-row: 1/3;
+  grid-column: 1/4;
+  :hover{
+    transform: rotate(360deg);
   }
-  
-  //besoin evenement quand hover a sur span hacking
-  #homepage a:hover span {
-    // what the fuck?
-    color: vars.$primary-blue;
-    // justify-content: left;
-    transform: translateX(-50%);
-  }
+}
 
-  #homepage a:hover {
-    background: vars.$primary-white;
-    transition: 0.3s ease-in-out;
-  }
+#homepage__about {
+  grid-row: 1/3;
+  grid-column: 4/6;
+}
 
-  #homepage__logo{
-    font-size: 5rem;
-  }
+#homepage__contact {
+  grid-row: 3/5;
+  grid-column: 4;
+}
 
+#homepage__github {
+  grid-row: 3;
+  grid-column: 5;
+}
 
-  #homepage__projects{
-    grid-row: 1/3;
-    grid-column: 1/4;
-  }
+#homepage__project1 {
+  grid-row: 3/5;
+  grid-column: 1;
+}
 
-  #homepage__about {
-    grid-row: 1/3;
-    grid-column: 4/6;
-  }
+#homepage__project2 {
+  grid-row: 3/5;
+  grid-column: 2;
+}
 
- #homepage__contact {
-    grid-row: 3/5;
-    grid-column: 4;
-  }
-
- #homepage__github {
-    grid-row: 3;
-    grid-column: 5;
-  }
-
- #homepage__project1 {
-    grid-row: 3/5;
-    grid-column: 1;
-  }
-
-  #homepage__project2 {
-    grid-row: 3/5;
-    grid-column: 2;
-  }
-  
-  #homepage__project3 {
-    grid-row: 3/5;
-    grid-column: 3;
-  }
-
+#homepage__project3 {
+  grid-row: 3/5;
+  grid-column: 3;
+}

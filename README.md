@@ -17,3 +17,5 @@ thingz2do
 - [ ] button that scrolls back up
 
 - [ ] responsive
+
+- [ ] put 3 random projects on the homepage with a roll to change the things dynamically

@@ -1,12 +1,12 @@
 services:
-  mongodb:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-    networks:
-      - app-network
+#   mongodb:
+#     image: mongo:latest
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+#     networks:
+#       - app-network
 
   server:
     build:
@@ -38,8 +38,8 @@ services:
     networks:
       - app-network
 
-volumes:
-  mongo-data:
+# volumes:
+#   mongo-data:
 
 networks:
   app-network:
