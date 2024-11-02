@@ -72,7 +72,8 @@ app.post("/api/submit", async (c) => {
 )
 
 app.get('/', (c) => c.text('Hello Bun!'))
-export default {
-  port: process.env.port || 8585,
-  fetch: app.fetch,
-}
+export default app
+//  {
+//   port: process.env.port || 8585,
+//   fetch: app.fetch,
+// }
