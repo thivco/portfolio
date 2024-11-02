@@ -5,7 +5,7 @@ WORKDIR /app/server
 #RUN bun install --production --silent
 EXPOSE 8585
 RUN adduser --disabled-password --gecos "" userbun
-RUN chown -R userbun /app/server
+RUN chown -R userbun /app/server 
 USER userbun
 #RUN bun install
 COPY . .
