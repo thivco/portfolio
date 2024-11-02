@@ -7,6 +7,7 @@ EXPOSE 8585
 RUN adduser --disabled-password --gecos "" userbun
 RUN chown -R userbun /app/server 
 USER userbun
+RUN bun install --save dotenv
 #RUN bun install
 RUN echo "Hello from Container !"
 COPY . .
