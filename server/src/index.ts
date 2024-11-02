@@ -17,7 +17,7 @@ const client = new MongoClient(URI, {
 const app = new Hono()
 app.use(
   cors({
-    origin: 'http://localhost:9595'
+    origin: process.env.DEFAULT_CLIENT_ADRESS
   })
 );
 
