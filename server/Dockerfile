@@ -3,7 +3,7 @@ WORKDIR /app/server
 # COPY package.json ./
 #COPY bun.lockb ./
 #RUN bun install --production --silent
-EXPOSE 8080
+EXPOSE 8585
 RUN adduser --disabled-password --gecos "" userbun
 RUN chown -R userbun /app/server 
 USER userbun
