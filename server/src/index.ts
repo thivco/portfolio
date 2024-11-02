@@ -12,7 +12,6 @@ const client = new MongoClient(URI, {
     deprecationErrors: true,
   }
 });
-// This is the way to get env variables I believe, check if dotenv is needed
 
 const app = new Hono()
 app.use(
@@ -23,30 +22,18 @@ app.use(
 
 // const URI = "mongodb://" + process.env.MONGO_INITDB_ROOT_USERNAME + ":" + process.env.MONGO_INITDB_ROOT_PASSWORD + "@mongodb:27017/Testing"
 // Here using mongodb instead of localhost as its a container
-// const client = new MongoClient(URI);
 const db = client.db('Portfolio');
 const collection = db.collection('comments');
 console.log("The URI", URI)
 console.log(URI);
 
-
-// app.use("/api/comments", async (c, next) => {
-//   console.log("Hi !");
-//   await next()
-// })
-
-
 app.get("/api/comments", async (c) => {
 
   try {
     await client.connect();
-    // const databasesList = await client.db().admin().listDatabases();
-    
-    // databasesList.databases.forEach(db => console.log(` - ${db.name}`));
     const COMMENTS = await collection.find().limit(50).toArray();
     console.log(COMMENTS, "The comments");
     return c.json(COMMENTS)
-    // await client.db("admin").command({ping:1});
 
     
   } catch (error) {
@@ -86,6 +73,6 @@ app.post("/api/submit", async (c) => {
 
 app.get('/', (c) => c.text('Hello Bun!'))
 export default {
-  port: 8585,
+  port: process.env.port || 8585,
   fetch: app.fetch,
 }
