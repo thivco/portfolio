@@ -41,6 +41,7 @@
 #homepage a:hover span {
   // what the fuck?
   color: vars.$primary-blue;
+  transform: rotate(360deg);
   // justify-content: left;
 }
 
@@ -59,7 +60,6 @@
   grid-row: 1/3;
   grid-column: 1/4;
   :hover{
-    transform: rotate(360deg);
   }
 }
 
