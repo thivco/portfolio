@@ -16,7 +16,7 @@ const client = new MongoClient(URI, {
 const app = new Hono()
 app.use(
   cors({
-    origin: "localhost:9595"
+    origin: "http://localhost:9595"
   })
 );
 
@@ -74,6 +74,6 @@ app.post("/api/submit", async (c) => {
 app.get('/', (c) => c.text('Hello Bun!'))
 export default
  {
-  port: process.env.port || 8585,
+  port: 8585,
   fetch: app.fetch,
 }

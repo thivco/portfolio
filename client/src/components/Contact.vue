@@ -1,7 +1,9 @@
 <script lang="ts">
 import { FormData } from "../types/FormData"
 import CommentCard from "./assets/CommentCard.vue";
+// import dotenv from "dotenv";
 
+// dotenv.config();
 // TODO USE ENV VARIABLES TO DEFINE FETCH URL
 
 export default {
@@ -18,7 +20,7 @@ export default {
   methods: {
     async submitHandler() {
       try {
-        const RESPONSE = await fetch("http://localhost:8585/api/submit", {
+        const RESPONSE = await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -34,7 +36,7 @@ export default {
     },
     async fetchComments() {
       try {
-        console.log( await fetch("http://localhost:8585/api/comments"))
+        // console.log( await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/comments"))
         const RESPONSE = await fetch("http://localhost:8585/api/comments")
         
         if (RESPONSE.ok) {
@@ -74,3 +76,4 @@ export default {
 
 
 </style>
+
