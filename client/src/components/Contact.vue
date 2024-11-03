@@ -20,7 +20,7 @@ export default {
   methods: {
     async submitHandler() {
       try {
-        const RESPONSE = await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/submit", {
+        const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -36,12 +36,12 @@ export default {
     },
     async fetchComments() {
       try {
-        // console.log( await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/comments"))
-        const RESPONSE = await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/comments")
+        console.log( await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/comments"))
+        const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" )+ "api/comments")
         
         if (RESPONSE.ok) {
           this.commentsData = await RESPONSE.json()
-          // console.log("Fetched comments data:", this.commentsData);
+          console.log("Fetched comments data:", this.commentsData);
           return this.commentsData
         }
       } catch (error) {
