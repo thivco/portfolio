@@ -41,7 +41,7 @@
 #homepage a:hover span {
   // what the fuck?
   color: vars.$primary-blue;
-  transform: rotate(360deg);
+  // transform: rotate(360deg);
   // justify-content: left;
 }
 
@@ -98,5 +98,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
   }
 }

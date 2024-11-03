@@ -163,7 +163,6 @@
 
 #homepage a:hover span {
   color: #03041D;
-  transform: rotate(360deg);
 }
 
 #homepage a:hover {
@@ -219,6 +218,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
   }
 }
 #navbar {
@@ -262,7 +262,7 @@
   align-items: center;
   background: #03041D;
   color: #dad3b7;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
 }
 
 .about__resume_button {

@@ -81,5 +81,9 @@ export default {
 </template>
 
 <style>
+
+body {
+  background-color: #F9F7EF;
+}
 </style>
 
