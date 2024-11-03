@@ -1,0 +1,5 @@
+FROM node:latest
+WORKDIR /app/client
+EXPOSE 9595
+USER node
+CMD ["sh", "-c", "npm install && npm run dev"]

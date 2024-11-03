@@ -1,0 +1,6 @@
+FROM oven/bun:latest
+WORKDIR /app/server
+EXPOSE 8585
+RUN adduser --disabled-password --gecos "" userbun
+USER userbun
+CMD ["sh", "-c", "bun install --production --silent && bun run dev"]

@@ -10,7 +10,7 @@ services:
 
   server:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_dev
       context: ./server
     volumes:
       - ./server:/app/server
@@ -31,7 +31,7 @@ services:
 
   client:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile_dev
       context: ./client
     volumes:
       - ./client:/app/client
