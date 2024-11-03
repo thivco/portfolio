@@ -2,13 +2,12 @@
 
 You only need to have the docker daemon and docker compose.
 
-Simply run `docker compose up -d --build` to run the project. It'll build the app and try to connect to the database (which should fail, unless you use your own database).
+Clone the project, then run `docker compose up -d --build` inside the directory to run the app in containers. It'll build the app and try to connect to the database (which should fail, unless you use your own database).
 
-Or visit https://client-production-cd5e.up.railway.app/ to test it out !
-
-
+Or visit https://thibaultv.up.railway.app/ to try it out in real conditions !
 
 
+```markdown
 thingz2do
 
 - [x] Create database with validator if not existing
@@ -30,3 +29,4 @@ thingz2do
 - [ ] responsive
 
 - [ ] put 3 random projects on the homepage with a roll to change the things dynamically
+```

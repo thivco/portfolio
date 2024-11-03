@@ -1,10 +1,15 @@
 @use "./_variables.scss" as vars;
 
 .comment_cards{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display:flex;
   gap:1rem;
+  flex-direction: column;
+  padding: 0;
   /* width: 100%; */
+}
+
+.comment_card {
+  padding: 0 2rem;
 }
 
 #contactform__submit {
@@ -13,10 +18,18 @@
 }
 
 #contact_form {
-  width: 50%;
-  margin: 0 auto;
+  width: 100%;
+  // margin: 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+#contactform__mail, #contactform__description, #contact_form > button{
+  font-family: "Fira Code";
+  padding: 1rem;
+  font-size: 1.2rem;
+  color:vars.$primary-white;
+  caret-shape: underscore;
 }
 
 #contact_form > * , #contact_form > *:focus{
@@ -25,10 +38,16 @@
   border-radius: 0%;
   background:vars.$primary-blue;
   margin: 0;
-  padding: 0;
+  // padding: 0;
   color:vars.$primary-white;
+  transition: 0.4s ease-in-out;
+}
+
+#contact_form > *:focus {
+  background-color: #0A0D40;
+  transition: 0.4s ease-in-out;
 }
 
 #contact_form > textarea {
-  height: 5vh;
+  height: 7vh;
 }

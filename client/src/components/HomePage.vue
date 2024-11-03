@@ -25,11 +25,16 @@ export default {
 <template>
   <div id="home" class="main_section">
     <h1 id="homepage__logo">Thibault</h1>
+    <div class="homepage__logobox">
+      <img class="homepage__stack_logo" src="../assets/vue.svg" alt="VueJS logo">
+      <img class="homepage__stack_logo" src="https://seeklogo.com/images/H/hono-logo-85A5D1206D-seeklogo.com.png" alt="Hono logo">
+      <img class="homepage__stack_logo" src="../assets/docker.svg" alt="Docker Logo">
+    </div>
     <p id="homepage__subtitle">Fullstack developer, configuration</p>
     <div id="homepage">
       <!-- <div v-for="page in pages"> -->
       <a class="homepage__link" :class="page.format" v-for="page in pages" v-bind:href="page.anchor"
-        :id="'homepage__' + page.title.toLowerCase()"><span>{{ page.title }}</span></a>
+        :id="'homepage__' + page.title.toLowerCase().replace(/\s/g, '')"><span>{{ page.title }}</span></a>
       <!-- </div> -->
     </div>
   </div>

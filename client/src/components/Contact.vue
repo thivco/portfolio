@@ -19,39 +19,46 @@ export default {
   },
   methods: {
     async submitHandler() {
-      try {
-        const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/submit", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(this.formData)
-        })
-        const DATA = await RESPONSE.json()
-        // Calling fetchComments to update the comments on submit
-        this.fetchComments()
-      } catch (error) {
-        console.error("Something wrong happened :", error);
+      console.log(this.formData);
+      
+      if(this.formData.email == "" || this.formData.description == ""){
+        alert("Vous devez renseigner une adresse mail et un commentaire.")
       }
-    },
-    async fetchComments() {
-      try {
-        console.log( await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/comments"))
-        const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" )+ "api/comments")
-        
-        if (RESPONSE.ok) {
-          this.commentsData = await RESPONSE.json()
-          console.log("Fetched comments data:", this.commentsData);
-          return this.commentsData
+      else {
+
+        try {
+          const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(this.formData)
+          })
+          const DATA = await RESPONSE.json()
+          // Calling fetchComments to update the comments on submit
+          this.fetchComments()
+        } catch (error) {
+          console.error("Something wrong happened :", error);
         }
-      } catch (error) {
-        console.error("Error in the front when fetching comment", error);
+      } 
+      },
+      async fetchComments() {
+        try {
+          console.log( await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/") + "api/comments"))
+          const RESPONSE = await fetch((import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" )+ "api/comments")
+          
+          if (RESPONSE.ok) {
+            this.commentsData = await RESPONSE.json()
+            console.log("Fetched comments data:", this.commentsData);
+            return this.commentsData
+          }
+        } catch (error) {
+          console.error("Error in the front when fetching comment", error);
+        }
       }
-    }
   },
   mounted() {
     this.fetchComments()
-    console.log("Testing the adresses", import.meta.env.VITE_DEFAULT_SERVER_ADRESS);
     
   },
 }
@@ -60,8 +67,7 @@ export default {
 
 <template>
   <div id="contact" class="main_section">
-    <p>Here is the contact form, feel free to contact me to give me ideas !</p>
-    <p>Please</p>
+    <h1>Venez on discute !</h1>
     <form id="contact_form" @submit.prevent="submitHandler">
       <!-- <form id="contactform" action="localhost:8585/api/post_comment" method="post"> -->
       <input type="email" v-model="formData.email" placeholder="Your mail adress" id="contactform__mail">

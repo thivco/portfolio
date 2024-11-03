@@ -51,9 +51,7 @@
 }
 
 #homepage__logo {
-  font-size: 5rem;
-
-  
+  font-size: 5rem;  
 }
 
 #homepage__projects {
@@ -76,19 +74,23 @@
   grid-column: 5;
 }
 
-#homepage__project1 {
+#homepage__justdance {
   grid-row: 3/5;
   grid-column: 1;
 }
 
-#homepage__project2 {
+#homepage__metroapp {
   grid-row: 3/5;
   grid-column: 2;
 }
 
-#homepage__project3 {
+#homepage__gosockets {
   grid-row: 3/5;
   grid-column: 3;
+}
+
+.homepage__stack_logo {
+  height: 64px;
 }
 
 @media (max-width: 1279px) {
