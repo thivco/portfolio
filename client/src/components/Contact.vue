@@ -1,6 +1,9 @@
 <script lang="ts">
 import { FormData } from "../types/FormData"
 import CommentCard from "./assets/CommentCard.vue";
+
+// TODO USE ENV VARIABLES TO DEFINE FETCH URL
+
 export default {
   components: {CommentCard},
   data() {
