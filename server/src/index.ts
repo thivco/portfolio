@@ -16,7 +16,7 @@ const client = new MongoClient(URI, {
 const app = new Hono()
 app.use(
   cors({
-    origin: "http://localhost:9595"
+    origin: "*"
   })
 );
 
@@ -27,10 +27,10 @@ const collection = db.collection('comments');
 console.log("The URI", URI)
 console.log(URI);
 
+client.connect();
 app.get("/api/comments", async (c) => {
 
   try {
-    await client.connect();
     const COMMENTS = await collection.find().limit(50).toArray();
     console.log(COMMENTS, "The comments");
     return c.json(COMMENTS)
@@ -39,11 +39,6 @@ app.get("/api/comments", async (c) => {
   } catch (error) {
     console.error("Error when fetching the comments in the back :", error);  
     return c.json({ error: 'Error fetching comments' }, 500);
-  }
-  finally {
-    await client.close()
-    console.log("Client closed");
-    
   }
 
 })
