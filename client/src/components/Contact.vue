@@ -37,7 +37,7 @@ export default {
     async fetchComments() {
       try {
         // console.log( await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/comments"))
-        const RESPONSE = await fetch("http://localhost:8585/api/comments")
+        const RESPONSE = await fetch(import.meta.env.VITE_DEFAULT_SERVER_ADRESS || "http://localhost:8585/" + "api/comments")
         
         if (RESPONSE.ok) {
           this.commentsData = await RESPONSE.json()
