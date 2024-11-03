@@ -6,6 +6,8 @@ Clone the project, then run `docker compose up -d --build` inside the directory 
 
 Or visit https://thibaultv.up.railway.app/ to try it out in real conditions !
 
+End of sprint results :
+![Kanban result](./client/image.png)
 
 ```markdown
 thingz2do

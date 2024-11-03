@@ -22,7 +22,7 @@ export default {
       console.log(this.formData);
       
       if(this.formData.email == "" || this.formData.description == ""){
-        alert("Vous devez renseigner une adresse mail et un commentaire.")
+        console.log("Vous devez renseigner une adresse mail et un commentaire.")
       }
       else {
 
@@ -81,9 +81,5 @@ export default {
 </template>
 
 <style>
-
-body {
-  background-color: #F9F7EF;
-}
 </style>
 

@@ -5,6 +5,7 @@
 @use "./homepage.scss";
 @use "./navbar.scss";
 @use "./about.scss";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,6 +30,7 @@ a {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   display: flex;
   place-items: center;
