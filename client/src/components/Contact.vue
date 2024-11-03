@@ -51,6 +51,8 @@ export default {
   },
   mounted() {
     this.fetchComments()
+    console.log("Testing the adresses", import.meta.env.VITE_DEFAULT_SERVER_ADRESS);
+    
   },
 }
 
