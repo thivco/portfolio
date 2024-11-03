@@ -26,6 +26,8 @@ const db = client.db('Portfolio');
 const collection = db.collection('comments');
 console.log("The URI", URI)
 console.log(URI);
+console.log("The adress", process.env.DEFAULT_CLIENT_ADRESS);
+
 
 client.connect();
 app.get("/api/comments", async (c) => {

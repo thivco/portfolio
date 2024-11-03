@@ -8,9 +8,9 @@ export default {
         about: { title: 'About', anchor: '#about' },
         contact: { title: 'Contact', anchor: '#contact' },
         github: { title: "Github", anchor: "https://github.com/thivco" },
-        project1: { title: "Project1", anchor: "#project1" },
-        project2: { title: 'Project2', anchor: '#project2' },
-        project3: { title: 'Project3', anchor: '#project3' },
+        project1: { title: "Just Dance", anchor: "#project1" },
+        project2: { title: 'Metro App', anchor: '#project2' },
+        project3: { title: 'Go Sockets', anchor: '#project3' },
         linkedin: { title: 'Linkedin', anchor: '#linkedin' },
       }
     }

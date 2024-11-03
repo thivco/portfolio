@@ -12,6 +12,6 @@ pkgs.mkShell {
         echo "Docker daemon already running."
       fi
       docker compose down && docker compose up -d --build
-      cd client/
+      echo "You only need to click once, fool"
   '';
 }
