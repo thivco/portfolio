@@ -13,6 +13,5 @@ pkgs.mkShell {
       fi
       docker compose down && docker compose up -d --build
       cd client/
-      npx sass -w src/style.scss src/style.css
   '';
 }

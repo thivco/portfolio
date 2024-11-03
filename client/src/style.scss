@@ -95,3 +95,16 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 1279px) {
+html {
+    scroll-snap-type: none;
+  }
+
+  .main_section { 
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align:unset;
+    height: 100%;
+  }
+}

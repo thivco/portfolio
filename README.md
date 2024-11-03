@@ -1,3 +1,14 @@
+# Try it at home !
+
+You only need to have the docker daemon and docker compose.
+
+Simply run `docker compose up -d --build` to run the project. It'll build the app and try to connect to the database (which should fail, unless you use your own database).
+
+Or visit https://client-production-cd5e.up.railway.app/ to test it out !
+
+
+
+
 thingz2do
 
 - [x] Create database with validator if not existing
