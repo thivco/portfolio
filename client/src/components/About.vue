@@ -20,10 +20,9 @@ export default {
       <p>En termes de technologies, j'ai une préférence / expérience avec Javascript, j'utilise principalement VueJS; j'ai fait quelques projets en utilisant Express/Hono. J'ai aussi pu travailler sur la CI/CD de quelques projets lors de mon alternance : la CI Gitlab, Docker, Ansible. Ce qui m'intéresserait : une opportunité, des missions pour en apprendre plus sur les outils que je connais, et connaître plus de ces outils.
 </p>
       </div>
-      <div id="about__pictures">
-        <p>Ici des images hihi</p>
-        <p>Dolor sit amet</p>
-      </div>
+      <a href="../../resume_tvivier.pdf" download="thibault_vivier_resume">Download CV</a>
+      <!-- <div id="about__pictures">
+      </div> -->
   </div>
 </template>
 

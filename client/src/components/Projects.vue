@@ -52,7 +52,6 @@ export default {
     <div id="projects" class="project_section" v-for="project in projects">
       <p class="project_section__title">{{project.title}}</p>
       <!-- <a class="project_section__visit project_section__button" :href="project?.project_test"> Try it out</a> -->
-      <a class="project_section__github project_section__button" :href="project.project_link">{{project.git_button_text}}</a>
       <div class="project_section__stack">
         <!-- <p>Stack used :</p> -->
         <!-- <div class="project_section__stacklist"> -->
@@ -61,6 +60,7 @@ export default {
       </div>
       <div class="project_section__description">{{ project.description }}</div>
       <!-- <img :src="project.image_link" alt=""> -->
+      <a class="project_section__github project_section__button" :href="project.project_link">{{project.git_button_text}}</a>
     </div>
   </div>
 </template>
