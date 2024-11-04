@@ -8,10 +8,10 @@ export default {
         about: { title: 'About', anchor: '#about' },
         contact: { title: 'Contact', anchor: '#contact' },
         github: { title: "Github", anchor: "https://github.com/thivco" },
-        project1: { title: "Just Dance", anchor: "#project1" },
-        project2: { title: 'Metro App', anchor: '#project2' },
-        project3: { title: 'Go Sockets', anchor: '#project3' },
-        linkedin: { title: 'Linkedin', anchor: '#linkedin' },
+        project1: { title: "Just Dance", anchor: "#justdance" },
+        project2: { title: 'Metro App', anchor: '#metroapp' },
+        project3: { title: 'Go Sockets', anchor: '#gosockets' },
+        linkedin: { title: 'Linkedin', anchor: 'https://linkedin.com/in/thibaultviv' },
       }
     }
   },
